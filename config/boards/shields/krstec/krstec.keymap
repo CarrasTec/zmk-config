@@ -32,7 +32,7 @@
 
         lower_layer {
             bindings = <
-    &KP_NLCK &trans &trans &trans &trans &trans        &trans   &trans   &trans &trans    &trans   &trans
+    &kp KP_NLCK &trans &trans &trans &trans &trans        &trans   &trans   &trans &trans    &trans   &trans
     &trans &trans &trans &trans &trans &trans        &trans   &trans   &trans &trans    &trans   &trans
     &trans &trans &trans &trans &trans &trans        &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp HOME &kp END
     &trans &trans &trans &trans &trans &trans        &trans   &trans   &trans &trans    &trans   &trans
