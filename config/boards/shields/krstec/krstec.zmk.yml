@@ -1,0 +1,8 @@
+file_format: '1'
+id: krstec
+name: krstec
+type: shield
+url: https://github.com/criscol64/krstec
+requires: [pro_micro]
+features:
+  - keys

@@ -1,0 +1,63 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+#define DEFAULT  0
+#define LOWER    1
+#define RAISE    2
+#define BOTH     3
+
+/ {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
+};
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+    &mt LGUI ESC   &kp N1 &kp N2 &kp N3   &kp N4    &kp N5             &kp N6    &kp N7    &kp N8    &kp N9  &kp N0   &kp BSLH
+    &kp CAPS       &kp Q  &kp W  &kp E    &kp R     &kp T              &kp Y     &kp U     &kp I     &kp O   &kp P    &kp MINUS
+    &mt LSHIFT TAB &kp A  &kp S  &kp D    &kp F     &kp G              &kp H     &kp J     &kp K     &kp L   &kp SEMI &mt RSHIFT ENTER
+    &mt LCTRL DEL  &kp Z  &kp X  &kp C    &kp V     &kp B              &kp N     &kp M     &kp COMMA &kp DOT &kp FSLH &kp SQT
+                                 &kp LALT &mo LOWER &kp BSPC &kp SPACE &mo RAISE &trans    &kp RALT  
+            >;
+        };
+
+        lower_layer {
+            bindings = <
+    &KP_NLCK &trans &trans &trans &trans &trans        &trans   &trans   &trans &trans    &trans   &trans
+    &trans &trans &trans &trans &trans &trans        &trans   &trans   &trans &trans    &trans   &trans
+    &trans &trans &trans &trans &trans &trans        &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp HOME &kp END
+    &trans &trans &trans &trans &trans &trans        &trans   &trans   &trans &trans    &trans   &trans
+                         &trans &trans &trans &trans   &trans   &trans &trans
+            >;
+        };
+
+        raise_layer {
+            bindings = <
+    &trans &trans &trans &trans &trans &trans           &trans &trans &trans        &trans         &trans &trans
+    &trans &trans &trans &trans &trans &trans           &trans &trans &trans        &trans         &trans &trans
+    &trans &trans &trans &trans &trans &trans           &MINUS &EQUAL &LEFT_BRACE   &RIGHT_BRACE   &PIPE  &GRAVE
+    &trans &trans &trans &trans &trans &trans           &trans &PLUS  &LEFT_BRACKET &RIGHT_BRACKET &BSLH  &TILDE
+                         &trans &trans &trans &trans    &trans &trans &trans
+            >;
+        };
+
+        both_layer {
+            bindings = <
+    &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans       &trans
+    &trans &trans &trans &trans &trans &trans        &trans &KP_N7 &KP_N8 &KP_N9 &KP_ASTERISK &KP_SLASH
+    &trans &trans &trans &trans &trans &trans        &trans &KP_N4 &KP_N5 &KP_N6 &KP_MINUS    &KP_PLUS
+    &trans &trans &trans &trans &trans &trans        &trans &KP_N1 &KP_N2 &KP_N3 &trans       &trans
+                                &trans &trans &trans &trans &KP_N0 &KP_N0 
+            >;
+        };
+    };
+};
