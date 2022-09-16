@@ -7,6 +7,7 @@
 #define LOWER    1
 #define RAISE    2
 #define BOTH     3
+#define NUMPAD   4
 
 / {
     conditional_layers {
@@ -24,11 +25,11 @@
 
         default_layer {
             bindings = <
-    &mt LGUI ESC   &kp N1 &kp N2 &kp N3   &kp N4    &kp N5             &kp N6    &kp N7    &kp N8    &kp N9  &kp N0   &kp BSLH
-    &kp CAPS       &kp Q  &kp W  &kp E    &kp R     &kp T              &kp Y     &kp U     &kp I     &kp O   &kp P    &kp MINUS
-    &mt LSHIFT TAB &kp A  &kp S  &kp D    &kp F     &kp G              &kp H     &kp J     &kp K     &kp L   &kp SEMI &mt RSHIFT ENTER
-    &mt LCTRL DEL  &kp Z  &kp X  &kp C    &kp V     &kp B              &kp N     &kp M     &kp COMMA &kp DOT &kp FSLH &kp SQT
-                                 &kp LALT &mo LOWER &kp BSPC &kp SPACE &mo RAISE &trans    &kp RALT  
+    &mt LGUI ESC   &kp N1 &kp N2 &kp N3   &kp N4    &kp N5             &kp N6    &kp N7      &kp N8    &kp N9  &kp N0   &kp BSLH
+    &kp CAPS       &kp Q  &kp W  &kp E    &kp R     &kp T              &kp Y     &kp U       &kp I     &kp O   &kp P    &kp MINUS
+    &mt LSHIFT TAB &kp A  &kp S  &kp D    &kp F     &kp G              &kp H     &kp J       &kp K     &kp L   &kp SEMI &mt RSHIFT ENTER
+    &mt LCTRL DEL  &kp Z  &kp X  &kp C    &kp V     &kp B              &kp N     &kp M       &kp COMMA &kp DOT &kp FSLH &kp SQT
+                                 &kp LALT &mo LOWER &kp BSPC &kp SPACE &mo RAISE &tog NUMPAD &kp RALT  
             >;
         };
 
@@ -54,11 +55,21 @@
 
         both_layer {
             bindings = <
-    &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans       &trans        &trans    &trans    &trans    &trans    &trans          &trans
-    &trans       &trans       &trans       &trans       &trans       &trans        &trans    &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_ASTERISK &kp KP_SLASH
-    &kp LANG1    &kp LANG2    &trans       &trans       &trans       &trans        &trans    &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_MINUS    &kp KP_PLUS
-    &out OUT_USB &trans       &out OUT_TOG &trans       &out OUT_BLE &trans        &trans    &kp KP_N1 &kp KP_N2 &kp KP_N3 &trans          &trans
-                                           &trans       &trans       &trans &trans &kp KP_N0 &kp KP_N0 
+    &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans       &trans        &trans &trans &trans &trans &trans &trans
+    &trans       &trans       &trans       &trans       &trans       &trans        &trans &trans &trans &trans &trans &trans
+    &kp LANG1    &kp LANG2    &trans       &trans       &trans       &trans        &trans &trans &trans &trans &trans &trans
+    &out OUT_USB &trans       &out OUT_TOG &trans       &out OUT_BLE &trans        &trans &trans &trans &trans &trans &trans
+                                           &trans       &trans       &trans &trans &trans &trans trans
+            >;
+        };
+        
+        numpad_layer {
+            bindings = <
+    &trans &trans &trans &trans &trans &trans        &trans &kp N7 &kp N8  &kp N9 &kp KP_ASTERISK &trans
+    &trans &trans &trans &trans &trans &trans        &trans &kp N4 &kp N5  &kp N6 &kp KP_SLASH    &trans
+    &trans &trans &trans &trans &trans &trans        &trans &kp N1 &kp N2  &kp N3 &kp KP_MINUS    &trans
+    &trans &trans &trans &trans &trans &trans        &trans &kp N0 &kp DOT &trans &kp KP_PLUS     &trans
+                         &trans &trans &trans &trans &trans &trans trans
             >;
         };
     };
