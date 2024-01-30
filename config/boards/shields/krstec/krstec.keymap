@@ -45,11 +45,11 @@
 
         raise_layer {
             bindings = <
-    &trans &kp KP_N7 &kp KP_N8  &kp KP_N9 &kp KP_ASTERISK &trans        &trans    &trans    &trans           &trans            &trans    &trans
-    &trans &kp KP_N4 &kp KP_N5  &kp KP_N6 &kp KP_SLASH        &trans    &trans    &trans           &trans            &trans    &trans
-    &trans &kp KP_N1 &kp KP_N2  &kp KP_N3 &kp KP_MINUS        &kp MINUS &kp EQUAL &kp LEFT_BRACE   &kp RIGHT_BRACE   &kp PIPE  &kp GRAVE
-    &trans &kp KP_N0 &kp KP_N0  &kp KP_DOT &kp KP_PLUS        &trans    &kp PLUS  &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp BSLH  &kp TILDE
-                         &trans &trans &trans &trans &trans    &trans    &trans
+    &trans &kp KP_N7 &kp KP_N8  &kp KP_N9 &kp KP_ASTERISK &trans        &trans    &trans    &trans            &trans           &trans    &trans
+    &trans &kp KP_N4 &kp KP_N5  &kp KP_N6 &kp KP_SLASH    &trans        &trans    &trans    &trans            &trans           &trans    &trans
+    &trans &kp KP_N1 &kp KP_N2  &kp KP_N3 &kp KP_MINUS    &trans        &kp MINUS &kp EQUAL &kp LEFT_BRACE    &kp RIGHT_BRACE  &kp PIPE  &kp GRAVE
+    &trans &kp KP_N0 &kp KP_N0  &kp KP_DOT &kp KP_PLUS    &trans        &trans    &kp PLUS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET &kp BSLH &kp TILDE 
+                                            &trans &trans &trans &trans &trans    &trans    &trans
             >;
         };
 
